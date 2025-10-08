@@ -1,7 +1,8 @@
+package testpackage;
 public class Pegawai {
     public String nip;
     public String nama;
-    public double gaji;
+    protected double gaji;
 
     public Pegawai(){
         System.out.println("Objek dari class Pegawai dibuat");
@@ -12,7 +13,7 @@ public class Pegawai {
         info += "NIP: " + nip + "\n";
         info += "Nama: " + nama + "\n";
         info += "Gaji: " + gaji + "\n";
-        
+
         return info;
     }
 }
