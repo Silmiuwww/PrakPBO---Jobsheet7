@@ -1,25 +1,26 @@
-class SepedaMotor extends Kendaraan {
-    int kapasitasTangki;
-    String bahanBakar;
+public class SepedaMotor extends Kendaraan {
+    public int kapasitasTangki;
+    public String bahanBakar;
 
-    // Constructor tanpa parameter
     public SepedaMotor() {
-        super();
-        this.kapasitasTangki = 0;
-        this.bahanBakar = "Belum diisi";
+        System.out.println(tahun);
+        System.out.println("Objek dari class SepedaMotor dibuat");
     }
 
-    // Constructor berparameter
     public SepedaMotor(String merk, String tipe, int tahun, int kapasitasTangki, String bahanBakar) {
-        super(merk, tipe, tahun);
-        this.kapasitasTangki = kapasitasTangki;
-        this.bahanBakar = bahanBakar;
+        System.out.println("Objek dari class SepedaMotor dibuat dengan constructor berparameter");
     }
 
-    // Overriding method getInfo()
     public String getInfo() {
-        return super.getInfo() +
-               "\nKapasitas Tangki: " + kapasitasTangki + " liter" +
-               "\nBahan Bakar: " + bahanBakar;
+        String info = "";
+        info += "Kapasitas Tangki: " + kapasitasTangki + " liter\n";
+        info += "Bahan Bakar: " + bahanBakar + "\n";
+        return info;
+    }
+
+    public String getAllInfo() {
+        String info = super.getInfo();
+        info += this.getInfo();
+        return info;
     }
 }

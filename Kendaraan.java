@@ -1,23 +1,24 @@
-class Kendaraan {
-    String merk;
-    String tipe;
-    int tahun;
+public class Kendaraan {
+    public String merk;
+    public String tipe;
+    protected int tahun;
 
-    // Constructor tanpa parameter
     public Kendaraan() {
-        this.merk = "Belum diisi";
-        this.tipe = "Belum diisi";
-        this.tahun = 0;
+        System.out.println("Objek dari class Kendaraan dibuat");
     }
 
-    // Constructor berparameter
     public Kendaraan(String merk, String tipe, int tahun) {
-        this.merk = merk;
-        this.tipe = tipe;
-        this.tahun = tahun;
+    this.merk = merk;
+    this.tipe = tipe;
+    this.tahun = tahun;
     }
 
     public String getInfo() {
-        return "Merk: " + merk + "\nTipe: " + tipe + "\nTahun: " + tahun;
+        String info = "";
+        info += "Merk: " + merk + "\n";
+        info += "Tipe: " + tipe + "\n";
+        info += "Tahun: " + tahun + "\n";
+
+        return info;
     }
 }
